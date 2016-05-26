@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject playerShip;
     public float curHealth;
     public GameObject bulletGo;
+    public GameObject coin;
 
     // Use this for initialization
     void Start()
@@ -50,6 +51,9 @@ public class EnemyScript : MonoBehaviour
     }
     void Death()
     {
+        coin = GameObject.Find("Coin");
+        var gold = coin.GetComponent<GoldScript>();
+        gold.Gold += Random.Range(1, 11);
         Destroy(gameObject);
     }
 }
