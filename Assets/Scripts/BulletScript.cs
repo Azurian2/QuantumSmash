@@ -20,5 +20,10 @@ public class BulletScript : MonoBehaviour {
             other.gameObject.SendMessage("ApplyDamage", 10);
             Destroy(gameObject);
         }
+        else if (source.tag != "Ship" && other.gameObject.tag == "Ship")
+        {
+            other.gameObject.SendMessage("ApplyDamage", 10);
+            Destroy(gameObject);
+        }
     }
 }

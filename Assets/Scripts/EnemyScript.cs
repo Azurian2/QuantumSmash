@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class EnemyScript : MonoBehaviour
 {
     public Rigidbody2D prefabBullet;
+    public Rigidbody2D prefabCoin;
     public float shootForce = 5000;
     private float lastFired;
     public float fireRate = 1.0F;
@@ -51,9 +52,9 @@ public class EnemyScript : MonoBehaviour
     }
     void Death()
     {
-        coin = GameObject.Find("Coin");
-        var gold = coin.GetComponent<GoldScript>();
-        gold.Gold += Random.Range(1, 11);
+        var coin = Instantiate(prefabCoin, transform.position, Quaternion.identity) as Rigidbody2D;
+        var coinScript = coin.gameObject.GetComponent<CoinDrop>() as CoinDrop;
+        coinScript.value = Random.Range(1, 11);
         Destroy(gameObject);
     }
 }
