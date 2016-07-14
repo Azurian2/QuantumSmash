@@ -8,6 +8,7 @@ TagManager:
   - PlayerData
   - Enemy
   - HealthUI
+  - ItemDatabase
   layers:
   - Default
   - TransparentFX
