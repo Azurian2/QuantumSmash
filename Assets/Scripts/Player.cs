@@ -33,6 +33,7 @@ public class Player : MonoBehaviour {
 
     void ApplyDamage( float damage )
     {
+        FloatingTextController.CreateFloatingText(damage.ToString(), transform);
         Health -= damage;
         if (Health <= 0)
         {

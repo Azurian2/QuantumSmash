@@ -185,6 +185,88 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 226656548}
+--- !u!1001 &237710989
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -176
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445702, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 160cf0f0907b0c5468601a2cd3e37599, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &280429600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,10 +2044,10 @@ GameObject:
   - 212: {fileID: 1872110851}
   - 50: {fileID: 1872110855}
   - 60: {fileID: 1872110854}
-  - 114: {fileID: 1872110856}
   - 114: {fileID: 1872110853}
   - 114: {fileID: 1872110857}
   - 114: {fileID: 1872110858}
+  - 114: {fileID: 1872110856}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Ship
@@ -2031,8 +2113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f1b72fc3d6d1d43a4d3173c917969f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rotationSpeed: 200
+  speed: 200
+  rotationSpeed: 500
 --- !u!60 &1872110854
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2120,7 +2202,7 @@ MonoBehaviour:
   shootForce: 5000
   fireRate: 1
   bullets: 5000
-  attackDamage: 10
+  attackDamage: 14
 --- !u!114 &1872110857
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         lastFired = Time.time;
+        FloatingTextController.Initialize();
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public class EnemyScript : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
+        FloatingTextController.CreateFloatingText(damage.ToString(), transform);
         curHealth -= damage;
         if (curHealth <= 0)
         {

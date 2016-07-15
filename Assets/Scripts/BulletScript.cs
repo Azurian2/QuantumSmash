@@ -17,12 +17,12 @@ public class BulletScript : MonoBehaviour {
     {
         if (source.tag != "Enemy" && other.gameObject.tag == "Enemy")
         {
-            other.gameObject.SendMessage("ApplyDamage", 10);
+            other.gameObject.SendMessage("ApplyDamage", Random.Range(5, 16));
             Destroy(gameObject);
         }
         else if (source.tag != "Ship" && other.gameObject.tag == "Ship")
         {
-            other.gameObject.SendMessage("ApplyDamage", 10);
+            other.gameObject.SendMessage("ApplyDamage", Random.Range(5, 16));
             Destroy(gameObject);
         }
     }
