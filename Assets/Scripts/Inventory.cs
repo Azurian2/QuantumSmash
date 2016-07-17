@@ -70,13 +70,22 @@ public class Inventory : MonoBehaviour {
     }
     void DrawInventory()
     {
+        int xOffset = 100;
+        int yOffset = 100;
+        int boxSize = 50;
+        int boxPadding = 5;
+        int invPadding = boxPadding * 2;
+
+        int boxStep = boxSize + boxPadding;
+        Rect invRect = new Rect(xOffset - invPadding, yOffset - invPadding, slotsX * boxStep + 2 * invPadding - boxPadding, slotsY * boxStep + 2 * invPadding - boxPadding);
+        GUI.Box(invRect, "", skin.GetStyle("InventoryBack"));
         Event e = Event.current;
         int i = 0;
         for (int y = 0; y < slotsY; y++)
         {
             for (int x = 0; x < slotsX; x++)
             {
-                Rect slotRect = new Rect(x * 60, y * 60, 50, 50);
+                Rect slotRect = new Rect(x * boxStep + xOffset, y * boxStep + yOffset, boxSize, boxSize);
                 GUI.Box(slotRect, "", skin.GetStyle("Slot"));
                 slots[i] = inventory[i];
                 if (slots[i].itemName != null)

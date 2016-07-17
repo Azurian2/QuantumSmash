@@ -14,6 +14,7 @@ public class ItemDatabase : MonoBehaviour {
         items.Add(new Item("Tin Ingot", 4, "A bar of solid tin", Item.ItemType.Material, Item.Rarity.Common));
         items.Add(new Item("Aluminum Ingot", 5, "A bar of bronze metal", Item.ItemType.Material, Item.Rarity.Common));
         items.Add(new Item("Module - Blank", 6, "A blank module, ready to be crafted into whatever module you wish.", Item.ItemType.Module, Item.Rarity.Common));
-        items.Add(new Item("Circuit Board", 5, "A fresh circuit board made for your electrical needs", Item.ItemType.Material, Item.Rarity.Common));
+        items.Add(new Item("Circuit Board", 7, "A fresh circuit board made for your electrical needs", Item.ItemType.Material, Item.Rarity.Common));
+        items.Add(new Item("Module - Ultimate", 6, "The Ultimate Laser with the power to enhance itself, growing from 100% to 125% damage over 5 seconds", Item.ItemType.Module, Item.Rarity.Epic));
     }
 }
