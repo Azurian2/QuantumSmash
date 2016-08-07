@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - HealthUI
   - ItemDatabase
+  - DialogueCanvas
   layers:
   - Default
   - TransparentFX
@@ -18,10 +19,10 @@ TagManager:
   - UI
   - 
   - 
-  - Background Image
+  - Ships
   - ui2
   - test
-  - 
+  - Background Image
   - 
   - 
   - 

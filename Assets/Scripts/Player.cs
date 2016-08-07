@@ -34,6 +34,7 @@ public class Player : MonoBehaviour {
     void ApplyDamage( float damage )
     {
         FloatingTextController.CreateFloatingText(damage.ToString(), transform);
+        DialogueController.GetInstance().ShowText("test\n1\n2\n3\n4\n5\n6\n7\n" + damage.ToString());
         Health -= damage;
         if (Health <= 0)
         {
